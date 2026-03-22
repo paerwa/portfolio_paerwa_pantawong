@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+.about-section {
+  @apply min-h-screen py-16 pt-10 bg-[#030014] relative overflow-hidden flex items-start;
+}
+
+.container {
+  @apply mx-auto px-6 md:px-[10%] flex flex-col items-center z-10;
+}
+
+.text-header {
+  @apply relative mb-16;
+}
+
+.title {
+  @apply text-5xl md:text-6xl font-black text-center
+  bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-500
+  bg-clip-text text-transparent;
+  filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.4));
+}
+
+.title-1 {
+  @apply text-center mt-2 text-lg md:text-xl opacity-70;
+}
+
+.info-wrapper {
+  @apply flex flex-col md:flex-row items-center md:items-start justify-between gap-10 w-full;
+}
+
+.info-text {
+  @apply text-center md:text-left;
+}
+
+.info-text1 {
+  @apply text-xl md:text-5xl font-bold  text-left -mt-12 md:mt-2
+  bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-500
+  bg-clip-text text-transparent;
+  filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.4));
+}
+
+.info-text2 {
+  @apply text-lg md:text-5xl font-bold mt-1 text-left md:mt-5;
+}
+
+.info-text3 {
+  @apply text-base md:text-xl text-gray-300 leading-relaxed text-justify max-w-xl pt-5;
+}
+
+.profile-wrapper {
+  @apply relative flex justify-center md:justify-end w-full md:w-auto -mt-5 md:-mt-4;
+}
+
+.profile-circle-img {
+  @apply w-52 h-52 md:w-90 md:h-90 rounded-full object-cover border-3 border-white/10 z-10 relative;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.glow-ring {
+@apply absolute inset-0 rounded-full blur-[15px] opacity-50;
+    background: radial-gradient(circle, #a855f7, #6366f1);
+    z-index: 0;
+}
+
+
+.contact-wrapper {
+  @apply flex flex-col md:flex-row gap-6 mt-5 md:-mt-5 justify-start w-full self-start;
+}
+
+.contact-card {
+  @apply flex items-center gap-4 px-6 py-4 rounded-2xl 
+  bg-[#0D0133] relative overflow-hidden;
+}
+
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+
+  padding: 1.5px;
+  background: linear-gradient(
+    90deg,
+    #a855f7,
+    #6366f1,
+    #22d3ee,
+    #a855f7
+  );
+
+  background-size: 300% 300%;
+  animation: borderRun 3s linear infinite;
+
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+@keyframes borderRun {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+.icon {
+  @apply w-6 h-6 text-purple-400;
+}
+
+.contact-text {
+  @apply text-white text-sm md:text-base font-bold;
+}

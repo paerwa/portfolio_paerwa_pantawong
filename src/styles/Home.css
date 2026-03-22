@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+.home-container {
+    @apply min-h-screen bg-[#030014] text-white relative overflow-x-hidden w-full;
+}
+
+.home-glow {
+    @apply absolute -top-[10%] -left-[10%] w-[400px] md:w-[700px] h-[400px] md:h-[700px] rounded-full -z-10 pointer-events-none;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.4) 0%, rgba(99, 102, 241, 0.1) 60%, transparent 80%);
+    filter: blur(100px);
+}
+
+.navbar {
+    @apply fixed top-0 left-0 right-0 z-[100] flex justify-between items-center px-4 md:px-[8%] py-6 bg-[#030014]/80 backdrop-blur-md border-b border-white/5;
+}
+
+.logo {
+    @apply text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent tracking-tighter p-1 mx-6;
+}
+
+.nav-desktop {
+    @apply hidden md:flex gap-8 items-center;
+}
+
+.nav-item {
+    @apply text-gray-400 font-medium transition-all duration-300 hover:text-white relative pb-1;
+}
+
+.nav-item.active { @apply text-purple-400 font-bold; }
+.nav-item.active::after, .nav-item:hover::after {
+    @apply content-[''] absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-purple-400 to-indigo-500;
+}
+
+.hamburger-btn {
+    @apply flex md:hidden flex-col gap-1 cursor-pointer z-[110] bg-transparent border-none mt-2;
+}
+
+.line {@apply w-[18px] h-[1px] bg-white transition-all duration-300;}
+.line.open:nth-child(1) { @apply rotate-45 translate-y-2; }
+.line.open:nth-child(2) { @apply opacity-0; }
+.line.open:nth-child(3) { @apply -rotate-45 -translate-y-2; }
+
+.nav-mobile {
+    @apply fixed inset-0 w-full h-screen bg-[#030014]/98 flex flex-col items-center justify-center gap-10 transition-transform duration-500 translate-x-full md:hidden;
+}
+
+.nav-mobile.show { @apply translate-x-0; }
+.nav-item-mobile { @apply text-3xl font-bold text-gray-400 hover:text-purple-400 transition-colors; }
+
+.hero-section {
+    @apply min-h-screen flex items-center justify-center pt-32 pb-16;
+}
+
+.hero-content-wrapper {
+    @apply container mx-auto px-6 md:px-[10%] flex flex-col md:flex-row items-center justify-between gap-12;
+}
+
+.hero-text-area {
+    @apply flex-1 text-left md:text-left flex flex-col items-start md:items-start;
+}
+
+.badge {
+    @apply px-5 py-2 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-300 text-xs font-medium mb-6 -my-2.5;
+    filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.3));
+}
+
+.text1 {
+    @apply text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight mb-2 -my-5 ;
+    filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.3));
+}
+
+.text2 {
+    @apply bg-gradient-to-r from-purple-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent inline-block;
+}
+
+.typewriter-container {
+    @apply text-xl md:text-2xl font-semibold text-purple-400 mb-6 min-h-[40px];
+}
+
+.text3 {
+    @apply text-gray-400 text-base md:text-lg max-w-md leading-relaxed -mt-2;
+}
+
+.hero-buttons {
+    @apply flex flex-row gap-4 mt-10;
+}
+
+.btn-project {
+    @apply px-5 py-2.5 rounded-lg flex items-center gap-3  bg-white/5 border border-white/10 text-white text-sm font-medium hover:bg-white/10 transition-all;
+}
+
+.arrowup {
+    @apply w-5 h-5 ;
+}
+
+.arrowdown {
+    @apply w-5 h-5;
+}
+
+.btn-contact {
+    @apply px-6 py-2.5 rounded-lg flex items-center gap-2 bg-indigo-600/20 border border-indigo-500/30 text-indigo-300 text-sm font-medium hover:bg-indigo-600/30 transition-all;
+}
+
+
+.hero-animation {
+    @apply block flex-[1.2] w-full 
+    max-w-[350px] md:max-w-[800px] lg:max-w-[1100px] 
+    mt-10 md:-mt-15 md:-mx-10;
+    transform: scale(1.2); 
+    @apply md:scale-110 lg:scale-125; 
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-placeholder {
+    @apply min-h-screen flex items-center justify-center border-t border-white/5 bg-[#030014];
+}
