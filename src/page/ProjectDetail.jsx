@@ -13,8 +13,12 @@ import Cat2 from "../picture/cat2.png";
 import Figma from "../picture/figmacat.png";
 import Data from "../picture/data.png";
 import Data2 from "../picture/data-2.png";
+import Data3 from "../picture/data-3.png";
 import UxUi from "../picture/uxui.png"
 import company from "../picture/company.png"
+import company_1 from "../picture/company-2.png";
+import line from "../picture/line.png";
+import line_2 from "../picture/line_2.png";
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -42,23 +46,36 @@ const ProjectDetail = () => {
       "Transformed and validated datasets using Python and SQL, ensuring high data quality for user-facing features and dashboards.",
       "Managed and queried relational databases (PostgreSQL, SQL Server) to support data-driven"
     ],
-    images: [Data, Data2], 
+    images: [Data,Data3, Data2], 
     liveLink: "#",
     githubLink: "#"
   },
 3: {
     title: "Furniture E-Commerce UX/UI",
     description: "Designed and developed a user-friendly interface for an online furniture store, focusing on intuitive navigation and seamless user experience. Created wireframes, user flows, and high-fidelity prototypes to optimize product browsing and checkout processes, improving usability and overall customer journey.",
-    technologies: ["Adobe xd", "Canva"],
+    technologies: ["Figma", "Canva"],
     features: [
       "Designed and prototyped a user-friendly interface for an online furniture store, enhancing usability and navigation.",
       "Created wireframes, user flows, and high-fidelity prototypes using Figma to improve product browsing and checkout experience.",
       "Optimized user experience by simplifying navigation and streamlining the online shopping journey."
     ],
-    images: [UxUi, company], 
+    images: [UxUi, company,company_1], 
     liveLink: "#",
     githubLink: "#"
   },
+  4: {
+      title: "LINE Stickers Design & Creator",
+      description: "Designed, illustrated, and published custom character sticker collections on the LINE Creators Market. Focused on expressive visual communication, character consistency, and digital asset commercialization to engage daily chat users.",
+      technologies: ["Procreate"],
+      features: [
+        "Character Conception & Storyboarding: Created unique, relatable character themes tailored for daily messaging.",
+        "Graphic & Asset Production: Produced high-resolution digital illustrations optimized to meet LINE Creator Market formatting guidelines (PNG transparencies, specific dimensions).",
+        "Commercial Release & Publishing: Successfully submitted, passed review guidelines, and published sticker sets on the official LINE Store for monetization."
+      ],
+      images: [line,line_2],
+      liveLink: "#",
+      githubLink: "#"
+    }
   };
 
   const project = projectData[id] || projectData[1];

@@ -3,6 +3,7 @@ import "../styles/Project.css";
 import CatImg from "../picture/cat.png"
 import Pipeline from "../picture/pipeline.png"
 import UxUi from "../picture/uxui.png"
+import line from "../picture/line.png"
 import { useNavigate } from "react-router-dom";
 import { ArrowTopRightOnSquareIcon, ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
@@ -39,6 +40,14 @@ const Projects = () => {
       link: "#",
       isFeatured: false,
       image: UxUi
+    },
+    {
+      id:4,
+      title:"LINE Stickers Design & Creator",
+      description: "Designed, illustrated, and published custom character sticker sets on the LINE Creators Market",
+      link: "#",
+      isFeatured: false,
+      image: line
     }
   ];
 

@@ -115,14 +115,14 @@ const Home = () => {
                                 className="btn-contact" 
                                 onClick={() => {
                                 const link = document.createElement('a');
-                                link.href = '/Resume (1).pdf'; 
+                                link.href = '/Resume_Paerwa.pdf'; 
                                 link.download = 'Resume_Paerwa_Pantawong.pdf';
                                 document.body.appendChild(link);
                                 link.click();
                                 document.body.removeChild(link);
                             }}
                             >
-                            download resume 
+                            Download resume 
                             <ArrowDownTrayIcon className="arrowdown" />
                             </button>
 
